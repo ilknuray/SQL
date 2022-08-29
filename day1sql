@@ -1,0 +1,21 @@
+/*
+DDL - DATA DEFINITION LANG.DATA
+CREATE -ALTER - DROP
+*/
+-- CREATE -TABLO OLUSTURMA -
+CREATE table ogrenci(
+ogr_no int,
+ogr_isimSoyisim VARCHAR(30),
+ogr_notlar REAL,
+yas int,
+adress VARCHAR(50),
+kayit_tarih DATE
+
+);
+--var olan tablodan yeni bir tablo olusturma
+create table ogr_notlari
+as
+select ogr_no, ogr_notlar from ogrenci;
+
+select * from ogrenci;
+select * from ogr_notlari;--kayi
